@@ -23,6 +23,12 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+    sourceSets {
+        getByName("main") {
+            java.srcDir("../Branding/App-Splash-Screen")
+        }
+    }
 }
 
 dependencies {
