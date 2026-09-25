@@ -106,13 +106,21 @@ fun IndoSplashScreen(
                     .border(1.5.dp, IndoPink.copy(alpha = 0.82f), CircleShape),
                 contentAlignment = Alignment.Center
             ) {
-                Text(
-                    text = "ϟ",
-                    color = Color.White,
-                    fontSize = 78.sp,
-                    fontWeight = FontWeight.Black,
-                    modifier = Modifier.alpha(0.98f)
-                )
+                Canvas(modifier = Modifier.size(68.dp)) {
+                    val logo = Path().apply {
+                        moveTo(19.7f, 2f)
+                        lineTo(7.3f, 17.1f)
+                        lineTo(14.5f, 17.1f)
+                        lineTo(11.8f, 30f)
+                        lineTo(25f, 13.2f)
+                        lineTo(17.9f, 13.2f)
+                        close()
+                    }
+                    drawPath(
+                        path = logo,
+                        color = Color.White
+                    )
+                }
             }
 
             Text(
