@@ -23,17 +23,6 @@ android {
     buildFeatures {
         compose = true
     }
-
-    sourceSets {
-        getByName("main") {
-            res.setSrcDirs(
-                listOf(
-                    "../Branding/App-Icon",
-                    "../Branding/App-Splash-Screen"
-                )
-            )
-        }
-    }
 }
 
 dependencies {
