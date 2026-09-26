@@ -4,20 +4,21 @@
     android:height="200dp"
     android:viewportWidth="200"
     android:viewportHeight="200">
+    <!-- Compact splash artwork with generous transparent padding. -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M63,25 A18,18 0,1 0,63,61 A18,18 0,1 0,63,25" />
+        android:pathData="M76,51.25 A11.7,11.7 0,1 0,76,74.65 A11.7,11.7 0,1 0,76,51.25" />
     <path
         android:fillColor="@android:color/transparent"
-        android:pathData="M63,75 L63,158"
+        android:pathData="M76,83.75 L76,137.7"
         android:strokeColor="#A52CFF"
-        android:strokeWidth="34"
+        android:strokeWidth="22.1"
         android:strokeLineCap="round" />
     <path
         android:fillColor="@android:color/transparent"
-        android:pathData="M68,72 L148,116 L68,160"
+        android:pathData="M79.2,81.8 L131.2,110.4 L79.2,139"
         android:strokeColor="#5A2DFF"
-        android:strokeWidth="34"
+        android:strokeWidth="22.1"
         android:strokeLineCap="round"
         android:strokeLineJoin="round" />
 </vector>
