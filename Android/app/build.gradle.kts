@@ -26,7 +26,12 @@ android {
 
     sourceSets {
         getByName("main") {
-            kotlin.srcDir("../Branding/App-Splash-Screen")
+            res.setSrcDirs(
+                listOf(
+                    "../Branding/App-Icon",
+                    "../Branding/App-Splash-Screen"
+                )
+            )
         }
     }
 }
