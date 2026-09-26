@@ -1,11 +1,12 @@
-package com.indo.app
+package com.indo.app.features.splash
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -13,9 +14,17 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.delay
 
 @Composable
-fun IndoSplashScreen() {
+fun IndoSplashScreen(
+    onFinished: () -> Unit
+) {
+    LaunchedEffect(Unit) {
+        delay(2500)
+        onFinished()
+    }
+
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -28,7 +37,6 @@ fun IndoSplashScreen() {
             val s = size.minDimension / 200f
             fun p(x: Float, y: Float) = Offset(x * s, y * s)
 
-            // Clean high-resolution logo: no bitmap border, no surrounding line.
             drawCircle(
                 color = Color.White,
                 radius = 18f * s,
@@ -37,10 +45,7 @@ fun IndoSplashScreen() {
 
             drawLine(
                 brush = Brush.linearGradient(
-                    colors = listOf(
-                        Color(0xFFB64CFF),
-                        Color(0xFF8D21FF)
-                    ),
+                    colors = listOf(Color(0xFFB64CFF), Color(0xFF8D21FF)),
                     start = p(63f, 72f),
                     end = p(63f, 158f)
                 ),
@@ -52,10 +57,7 @@ fun IndoSplashScreen() {
 
             drawLine(
                 brush = Brush.linearGradient(
-                    colors = listOf(
-                        Color(0xFF2A2DFF),
-                        Color(0xFF8D21FF)
-                    ),
+                    colors = listOf(Color(0xFF2A2DFF), Color(0xFF8D21FF)),
                     start = p(68f, 72f),
                     end = p(148f, 116f)
                 ),
@@ -67,10 +69,7 @@ fun IndoSplashScreen() {
 
             drawLine(
                 brush = Brush.linearGradient(
-                    colors = listOf(
-                        Color(0xFF2A2DFF),
-                        Color(0xFF8D21FF)
-                    ),
+                    colors = listOf(Color(0xFF2A2DFF), Color(0xFF8D21FF)),
                     start = p(148f, 116f),
                     end = p(68f, 160f)
                 ),
