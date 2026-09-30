@@ -9,7 +9,7 @@
 
         <!-- Android 12+ system splash: one splash only, no second Compose splash. -->
         <item name="android:windowSplashScreenBackground">@color/indo_background</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/indo_splash_logo</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
         <item name="android:windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
     </style>
 </resources>
